@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### ALIASES ###
 alias kubectl="kubecolor"
+alias v="nvim"
 alias ls="ls -lahG"
 
 # Colorize grep output (good for log files)
@@ -109,6 +110,7 @@ alias rm='rm -i'
 
 BB_SCRIPTS="~/configs/bb-scripts"
 alias k8s-all-clusters="bash $BB_SCRIPTS/k8s-all-clusters.sh"
+alias k8s-check-cluster="bash $BB_SCRIPTS/k8s-check-cluster.sh"
 
 # User configuration
 
@@ -152,20 +154,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-function load-nvm {
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-}
-
-# nvm
-if [[ "x${TERM_PROGRAM}" = "xvscode" ]]; then 
-  echo 'in vscode, nvm not work; use `load-nvm`';
-else 
-  load-nvm
-fi
-
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -179,3 +167,5 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PATH="$PATH:$HOME/.rvm/bin"
 
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
