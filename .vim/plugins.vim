@@ -21,6 +21,11 @@ Plug 'morhetz/gruvbox'
 
 " Typing
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'yggdroot/indentline'
+Plug 'scrooloose/nerdcommenter'
 
-" Initialize plugin system
+"Initialize plugin system
 call plug#end()

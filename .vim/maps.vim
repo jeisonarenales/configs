@@ -6,3 +6,4 @@ nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :q!<CR>
 nmap <Leader>x :x<CR>
+nmap <Leader>ag :Ag<CR>
