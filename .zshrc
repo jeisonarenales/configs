@@ -36,7 +36,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 15
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -119,6 +119,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Setting PATH for Terragrunt
 PATH="$HOME/.tgenv/bin:$PATH"
 
+# Setting PATH for kubectl krew
+PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # # MacPorts Installer addition on 2020-03-16_at_10:46:26: adding an appropriate PATH variable for use with MacPorts.
 PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 
@@ -129,5 +132,9 @@ PATH="$HOME/bin:${PATH}"
 
 export PATH=$PATH
 
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

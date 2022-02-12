@@ -27,5 +27,5 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 
-"Initialize plugin system
+" Initialize plugin system
 call plug#end()
