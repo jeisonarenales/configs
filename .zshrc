@@ -109,7 +109,7 @@ alias rm='rm -i'
 export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 
 # pyenv
-export PYENV_VERSION="3.7.12"
+export PYENV_VERSION="3.8.13"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
 
@@ -133,7 +133,7 @@ PATH="$HOME/bin:${PATH}"
 export PATH=$PATH
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
