@@ -138,3 +138,11 @@ export PATH=$PATH
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source "${HOME}/.iterm2_shell_integration.zsh"
+iterm2_print_user_vars() {
+  iterm2_set_user_var awsProfile $AWS_PROFILE
+  iterm2_set_user_var MyPublicIp $(dig +short myip.opendns.com @resolver1.opendns.com)
+}
